@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className=" bg-green-500 flex ">Welcome to project!</h1>
-      <Button>click here to verify</Button>
+    <div className=" flex flex-col items-center justify-center h-screen ">
+      <UserButton></UserButton>
     </div>
   );
 }
