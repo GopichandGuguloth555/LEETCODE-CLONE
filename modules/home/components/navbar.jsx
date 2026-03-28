@@ -19,10 +19,12 @@ const Navbar = ({ userRole }) => {
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-5xl px-4">
       
-      <div className="bg-white/10 dark:bg-black/10 backdrop-blur-md border border-white/20 
-      dark:border-white/10 rounded-2xl shadow-lg shadow-black/5 
-      dark:shadow-black/20 transition-all duration-200 
-      hover:bg-white/15 dark:hover:bg-black/15">
+      <div
+        className="bg-white/80 backdrop-blur-md border border-zinc-200/80
+      dark:bg-zinc-950/85 dark:border-zinc-700/80 rounded-2xl shadow-lg
+      shadow-zinc-900/10 dark:shadow-black/40 transition-all duration-200
+      hover:bg-white/90 dark:hover:bg-zinc-950/95"
+      >
 
         <div className="px-6 py-4 flex justify-between items-center">
           
@@ -45,24 +47,24 @@ const Navbar = ({ userRole }) => {
             
             <Link
               href="/problems"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 
-              hover:text-amber-600 cursor-pointer dark:hover:text-amber-400"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-200
+              hover:text-amber-600 dark:hover:text-amber-400"
             >
               Problems
             </Link>
 
             <Link
               href="/about"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 
-              hover:text-amber-600 cursor-pointer dark:hover:text-amber-400"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-200
+              hover:text-amber-600 dark:hover:text-amber-400"
             >
               About
             </Link>
 
             <Link
               href="/profile"
-              className="text-sm font-medium text-zinc-600 dark:text-zinc-400 
-              hover:text-amber-600 cursor-pointer dark:hover:text-amber-400"
+              className="text-sm font-medium text-zinc-700 dark:text-zinc-200
+              hover:text-amber-600 dark:hover:text-amber-400"
             >
               Profile
             </Link>

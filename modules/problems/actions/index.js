@@ -9,7 +9,6 @@ import { includes } from "zod";
 
 export const getAllProblems = async () => {
   try {
-    
     const user = await currentUser();
     const data = await db.user.findUnique({
       where: {
@@ -41,6 +40,9 @@ export const getAllProblems = async () => {
 };
 
 export const getProblemById = async (id) => {
+  if (id == null || id === "") {
+    return { success: false, error: "Missing problem id", data: null };
+  }
   try {
     const problem = await db.problem.findUnique({
       where: {
@@ -212,6 +214,9 @@ export const executeCode = async (source_code , language_id , stdin , expected_o
 }
 
 export const getAllSubmissionByCurrentUserForProblem = async (problemId)=>{
+  if (problemId == null || problemId === "") {
+    return { success: true, data: [] };
+  }
   const user = await currentUser();
 
   const dbUser = await db.user.findUnique({
